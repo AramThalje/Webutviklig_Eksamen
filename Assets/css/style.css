@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 5px;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.navigasjon{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.navigasjon .nav-menu{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  justify-content: center;
+  a {
+    text-decoration: none;
+  }
+  #logo{
+    font-size: 1.5em;
+    color: #fff;
+  }
+}
+.navigasjon .nav-iconer{
+  display: flex;
+  flex-wrap: wrap;
+  
+  list-style: none;
+  justify-content: end;
+  a {
+    text-decoration: none;
+    
+    font-size: 1em;
+  }
+}
+#nav-search-bar{
+  position: relative;
+  align-items: start;
+  i{
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 1em;
+   color: #321515;
+  }
+}
+
+
+
+
+
+
+.scroll-container {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  
+.scroll-container img {
+    padding: 10px;
+  }
+
+.scroll-container img{
+    width: 600px;
+    height: 400px;
+}
