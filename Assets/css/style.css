@@ -3,7 +3,20 @@
   box-sizing: border-box;
   padding: 5px;
 }
+
+/*body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+}*/
+
+
+
 body{
+  
   font-family: Arial, Helvetica, sans-serif;
 }
 .navigasjon{
@@ -53,21 +66,83 @@ body{
 }
 
 
-
-
-
-
-.scroll-container {
-    overflow: auto;
-    white-space: nowrap;
-    padding: 10px;
-  }
-  
-.scroll-container img {
-    padding: 10px;
-  }
-
-.scroll-container img{
-    width: 600px;
-    height: 400px;
+.banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60%;
+  min-width: 30%;
+  font-family: Arial, sans-serif;
+    
 }
+
+.carousel-track {
+  display: flex;
+  list-style-type: none;
+  overflow-x: auto;
+  width: 80%;
+  min-width: 100%;
+  padding: 0;
+  border-radius: 10px;
+  scroll-snap-type: x mandatory;
+  
+}
+
+
+
+/* Hvert bildeelement */
+.carousel-item {
+  position: relative;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Bildetekst (caption) */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.caption h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.caption p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+/* Knapp */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #ff4500;
+}
+
+
+
+
+
