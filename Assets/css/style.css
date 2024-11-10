@@ -1,24 +1,21 @@
+html{
+  
+  scroll-behavior: smooth;
+}
+
 *{
   margin: 0;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 3px;
 }
 
-/*body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-}*/
-
-
-
+/* body */
 body{
   
   font-family: Arial, Helvetica, sans-serif;
+  
 }
+/* Header */
 .navigasjon{
   display: flex;
   flex-wrap: wrap;
@@ -29,16 +26,20 @@ body{
 .navigasjon .nav-menu{
   display: flex;
   flex-wrap: wrap;
-  gap: 0;
   list-style: none;
   justify-content: center;
   a {
     text-decoration: none;
   }
+
   #logo{
-    font-size: 1.5em;
-    color: #fff;
+    
+    font-size: 1.3em;
+    color: #0f0e0e;
+    font-weight: bold;
   }
+  
+
 }
 .navigasjon .nav-iconer{
   display: flex;
@@ -55,57 +56,58 @@ body{
 #nav-search-bar{
   position: relative;
   align-items: start;
+  
   i{
    position: absolute;
    right: 10px;
-   top: 50%;
+   top: 45%;
    transform: translateY(-50%);
    font-size: 1em;
    color: #321515;
+   cursor: pointer;
   }
 }
 
+/* main seksjoner */
+
+/* Seksjon 1 Banner*/
 
 .banner{
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 60%;
-  min-width: 30%;
-  font-family: Arial, sans-serif;
+  /* min-height: 40vh;  */
+  
+  
+ 
     
 }
 
-.carousel-track {
+.banner-menu {
   display: flex;
   list-style-type: none;
   overflow-x: auto;
-  width: 80%;
-  min-width: 100%;
-  padding: 0;
+  width: 50%;
   border-radius: 10px;
   scroll-snap-type: x mandatory;
   
 }
-
-
-
-/* Hvert bildeelement */
-.carousel-item {
+.banner-item {
   position: relative;
   flex: 0 0 100%;
   scroll-snap-align: start;
+  width: 100%;
+  height: auto;
 }
 
-.carousel-item img {
-  width: 100%;
+.banner-menu img {
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 10px;
 }
 
 /* Bildetekst (caption) */
-.caption {
+.banner-caption {
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -114,16 +116,21 @@ body{
   padding: 15px;
   border-radius: 10px;
   max-width: 70%;
+  
 }
 
-.caption h2 {
+.banner-caption h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
+  width: 100%;
+  height: auto;
 }
 
-.caption p {
+.banner-caption p {
   font-size: 1em;
   margin-bottom: 10px;
+  width: 100%;
+  height: auto;
 }
 
 /* Knapp */
@@ -136,13 +143,64 @@ body{
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s;
+
+  &:hover{
+    background-color: #ff4500;
+  }
 }
 
-.button:hover {
-  background-color: #ff4500;
+/* Seksjon 2 */
+
+.product-artikler{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  margin: 10px;
+
+  p{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  img{
+    width: 300px;
+    height: 250px;
+    border-radius: 20px;
+  }
+ 
 }
+.product-card .rating{
+  display: flex;
+  align-items: baseline;
+  li{
+    
+    display: flex;
+    list-style: none;
+  }
+}
+.beste-produkter-menu li{
+  display: inline-flex;
+  margin-right: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  border-radius: 10px;
+  margin: 10px;
 
+  a{
+    text-decoration: none;
+  }
+  
+}
+.beste-produkter-header{
+  text-align: center;
+  a:hover{
+    background-color: #0f0e0e;
+    color: white;
+    transition: 1s;
+    border: 1px solid blue;
+    border-radius: 5px solid black; 
+  }
 
-
-
-
+}
