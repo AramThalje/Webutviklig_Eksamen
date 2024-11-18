@@ -1,6 +1,6 @@
 html{
   scroll-behavior: smooth;
-  margin: 0 30px 0 30px;
+  
 }
 
 *{
@@ -12,6 +12,7 @@ html{
 
 /* body */
 body{  
+  
   font-family: Arial, Helvetica, sans-serif;
 
 }
@@ -39,6 +40,14 @@ img {
   justify-content: center;
   a {
     text-decoration: none;
+  }
+
+  @media (max-width: 768px){
+    .nav-menu{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   #logo{
@@ -79,79 +88,68 @@ img {
 
 /* main seksjoner */
 
-/* Seksjon 1 Banner*/
-.banner{
+/* Grunnstil for banner */
+.banner {
   display: flex;
-  justify-content: center;
-  /* min-height: 40vh;  */ 
-}
-
-.banner-menu {
-  display: flex;
-  list-style-type: none;
   overflow-x: auto;
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  scroll-snap-type: x mandatory;
+  max-width: 1000px;
+  margin: auto;
   
 }
 .banner-item {
+  min-width: 100%;
   position: relative;
-  flex: 0 0 100%;
-  scroll-snap-align: start;
   
 }
 
-.banner-menu img {
-  max-width: 100%;
-  height: 100%;
+.banner-item img {
+  width: 100%;
+  height: 400px;
   display: block;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
-/* Bildetekst (caption) */
+/* Stil for bildetekst */
 .banner-caption {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  bottom: 100px;
+  
   color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-  border-radius: 10px;
-  max-width: 70%;
+  padding: 10px 20px;
   
 }
 
-.banner-caption h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  width: 100%;
-  height: auto;
-}
-
-.banner-caption p {
-  font-size: 1em;
-  margin-bottom: 10px;
-  width: 100%;
-  height: auto;
-}
-
-/* Knapp */
-.button {
+.banner-caption .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ff6347;
-  color: #fff;
+  background-color: white; /* Farge på knappen */
+  color: black;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   font-weight: bold;
-  transition: background-color 0.3s;
+}
 
-  &:hover{
-    background-color: #ff4500;
+
+/* Responsiv tilpasning */
+@media (max-width: 768px) {
+  
+  .banner-caption {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  .banner-caption h2 {
+    font-size: 1.2rem;
+  }
+
+  .banner-caption .button {
+    font-size: 0.9rem;
+    padding: 5px 10px;
   }
 }
+
 
 /* Seksjon 2 */
 
@@ -313,13 +311,16 @@ img {
 
 .anmeldelser-container{
   display: flex;
-  flex-wrap: wrap;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  width: 100%;
   justify-content: center;
   gap: 1rem;
   padding: 1rem;
   align-items: center;
 }
 .anmeldelse-card{
+  
   background-color: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -376,11 +377,131 @@ img {
     padding: 10px;
     width: 250px;
     text-align: center;
-}
-
-
-}
-
-
+}}
 /* Ferdi med index.html side*/
 
+/* produkt.html */
+
+.layout-wrapper {
+  max-width: 1200px;
+  margin: 0 auto; /* Sentrerer layouten i midten av skjermen */
+  display: flex; /* Bruk flex for å plassere galleriet og produktdetaljer ved siden av hverandre */
+  gap: 40px; /* Øk avstanden mellom galleriet og produktdetaljene */
+  padding: 40px 0; /* Legger til topp og bunnpadding for bedre utseende */
+  align-items: flex-start; /* Starter produktdetaljene på samme høyde som galleriet */
+  justify-content: center;
+}
+
+/* Galleri seksjon - grid layout */
+.gallery-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Venstre kolonne for små bilder, høyre for stort bilde */
+  grid-template-rows: repeat(3, 1fr); /* Tre rader i venstre kolonne */
+  gap: 15px; /* Avstand mellom bildene */
+  flex: 1; /* Galleriet tar opp lik plass som produktdetaljene */
+  max-width: 550px; /* Sett en maksimal bredde for galleri for balanse */
+  height: 600px;
+}
+
+.product-item-1,
+.product-item-2,
+.product-item-3 {
+  grid-column: 1; /* Plasserer de små bildene i første kolonne */
+  border-radius: 5px;
+}
+
+.right-column {
+  grid-column: 2; /* Plasserer det store bildet i andre kolonne */
+  grid-row: 1 / 4; /* Strekker seg over alle tre radene */
+  border-radius: 5px;
+}
+
+/* Produktdetaljer */
+.product-property {
+  flex: 1; /* Produktdetaljene tar opp like mye plass som galleriet */
+  max-width: 450px; /* Sett en maksimal bredde for produktdetaljene for balanse */
+}
+
+.product-property h2,
+.product-property a,
+.product-property p,
+.product-property select,
+.product-property button {
+  margin-bottom: 20px; /* Legger til avstand mellom elementene */
+  display: block;
+}
+
+.product-property button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styling for detaljer-seksjonen */
+details {
+  margin-top: 10px;
+  
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%; /* Strekker seg over hele bredden */
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+
+/* Arrow style */
+summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+
+/* Open arrow rotation */
+details[open] > summary::after {
+  content: '-';
+}
+
+/* Article styling */
+.product-details {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Responsiv styling */
+@media only screen and (max-width: 768px) {
+  .layout-wrapper {
+      flex-direction: column; /* Sett alt i én kolonne */
+      align-items: center; /* Sentrer innholdet på mobil */
+      padding: 20px; /* Mindre padding på mobil */
+  }
+
+  .gallery-section {
+      grid-template-columns: 1fr; /* Sett alle bilder i én kolonne */
+      grid-template-rows: auto; /* Tilpass høyden automatisk */
+      width: 100%;
+      max-width: 400px;
+  }
+
+  .right-column {
+      grid-row: 2; /* Plasser stort bilde under de små på mobil */
+  }
+
+  .product-property {
+      max-width: 100%; /* Bruk full bredde på små skjermer */
+      text-align: center; /* Sentraliser teksten på mobil */
+  }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/css/Ikoner/css/fontawesome.css">
+    <link rel="stylesheet" href="Assets/css/Ikoner/css/brands.css">
+    <link rel="stylesheet" href="Assets/css/Ikoner/css/solid.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Aram</title>
+    <style>
+    /* Generell stil */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 3px;
+}
+
+/* body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sikrer at bildet dekker hele figuren */
+}
+
+/* Sentrering av layouten */
+.layout-wrapper {
+    width: 90%; /* Jevn avstand fra venstre og høyre */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; /* Flexbox for horisontal og vertikal sentrering */
+    align-items: center; /* Sentrer innhold vertikalt */
+    justify-content: center; /* Sentrer innhold horisontalt */
+    gap: 20px; /* Avstand mellom galleri og produktdetaljer */
+    min-height: 100vh; /* Fyll hele høyden av skjermen */
+    box-sizing: border-box;
+}
+
+/* Galleri seksjon - grid layout */
+.gallery-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Venstre kolonne for små bilder, høyre for stort bilde */
+    grid-template-rows: repeat(3, 1fr); /* Tre rader i venstre kolonne */
+    gap: 10px; /* Avstand mellom bildene */
+    flex: 1; /* Ta opp lik bredde som produktdetaljer */
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.product-item-1 {
+    grid-column: 1; /* Første kolonne */
+    grid-row: 1; /* Første rad */
+}
+
+.product-item-2 {
+    grid-column: 1;
+    grid-row: 2; /* Andre rad */
+}
+
+.product-item-3 {
+    grid-column: 1;
+    grid-row: 3; /* Tredje rad */
+}
+
+.right-column {
+    grid-column: 2; /* Andre kolonne */
+    grid-row: 1 / 4; /* Strekker seg over alle tre radene */
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Produktdetaljer */
+.product-property {
+    flex: 1; /* Ta opp lik bredde som galleriet */
+    display: flex; /* Bruk flexbox for å sentrere innholdet inne i seksjonen */
+    flex-direction: column;
+    justify-content: center; /* Vertikal sentrering av innhold */
+    align-items: flex-start; /* Start fra venstre */
+}
+
+.product-property h2,
+.product-property a,
+.product-property p,
+.product-property select,
+.product-property button {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.product-property button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Styling for detaljer-seksjonen */
+details {
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%; /* Strekker seg over hele bredden */
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+/* Arrow style */
+summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: auto;
+    transition: transform 0.2s;
+}
+
+/* Open arrow rotation */
+details[open] > summary::after {
+    content: '-';
+}
+
+/* Article styling */
+.product-details {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Remove browser default marker */
+summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Responsiv styling */
+@media only screen and (max-width: 768px) {
+    .layout-wrapper {
+        flex-direction: column; /* Sett alt i én kolonne */
+        align-items: center; /* Sentrer horisontalt på mobil */
+    }
+
+    .gallery-section {
+        grid-template-columns: 1fr; /* Sett alle bilder i én kolonne */
+        grid-template-rows: auto; /* Tilpass høyden automatisk */
+        width: 100%;
+        height: auto;
+    }
+
+    .right-column {
+        grid-row: 2; /* Plasser stort bilde under de små */
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .gallery-section {
+        width: 100%;
+        height: auto;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="layout-wrapper">
+            <!-- Galleri -->
+            <section class="gallery-section">
+                <!-- Fire mindre bilder i grid layout -->
+                <img class="product-item-1" src="Assets/img/dressmann-bilde-2.jpg" alt="Lite bilde 1">
+                <img class="product-item-2" src="Assets/img/dressmann-bilde-3.jpg" alt="Lite bilde 2">
+                <img class="product-item-3" src="Assets/img/dressmann-bilde-4.jpg" alt="Lite bilde 3">
+                <!-- Stort bilde -->
+                <img class="right-column" src="Assets/img/dressmann-bilde-1.jpg" alt="Stort bilde">
+            </section>
+    
+            <!-- Produktdetaljer -->
+            <section class="product-property">
+                <h2>Produktnavn</h2>
+                <a href="https://dressmann.com/no">MERKEBAVN</a>
+                <p>5195 kr inkl. mva.</p>
+                <p>Farge: <strong>Beige</strong></p>
+                <label for="size">Velg størrelse:</label>
+                <select id="size">
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button type="button">Legg i handlevogn</button>
+    
+                <!-- Detaljer -->
+                <details>
+                    <summary>Materiale og vedlikehold</summary>
+                    <p>Informasjon om materiale og vedlikehold.</p>
+                </details>
+                <details>
+                    <summary>Produktdetaljer</summary>
+                    <p>Informasjon om produktdetaljene.</p>
+                </details>
+                <details>
+                    <summary>Størrelsestabell</summary>
+                    <p>Informasjon om størrelsestabellen.</p>
+                </details>
+            </section>
+        </div>
+    </main>
+</body>
+</html>

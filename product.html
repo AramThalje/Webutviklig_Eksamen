@@ -6,39 +6,81 @@
     <link rel="stylesheet" href="Assets/css/Ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="Assets/css/Ikoner/css/brands.css">
     <link rel="stylesheet" href="Assets/css/Ikoner/css/solid.css">
-	<link rel="stylesheet" href="Assets/css/style.css">
-    <title>product</title>
+    <link rel="stylesheet" href="Assets/css/style.css">
+    <title>Product</title>
+    <style>
+        /* Plasser CSS-regler her dersom de er spesifikke for denne siden */
+    </style>
 </head>
 <body>
     <header>
         <!-- Navigation -->
         <nav class="navigasjon">
-
             <form action="#" method="get" id="nav-search-bar">
                 <input type="search" name="search" placeholder="Søk etter produkter...">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </form>
-            
-            
             <ul class="nav-menu">
-                <li><a href="hjem.html"> Hjem</a></li>
-                <li><a href="#pordukter"> Produkter</a></li>
+                <li><a href="hjem.html">Hjem</a></li>
+                <li><a href="#produkter">Produkter</a></li>
                 <li id="logo"><a href="index.html">LOGO</a></li>
-                <li><a href="#kategorier"> Kategorier</a></li>
-                <li><a href="#kontakt-oss"> Kontakt oss</a></li>
-                
+                <li><a href="#kategorier">Kategorier</a></li>
+                <li><a href="#kontakt-oss">Kontakt oss</a></li>
             </ul>
-
             <ul class="nav-iconer">
                 <li><a href="#"><i class="fa-regular fa-user"></i></a></li>
                 <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
                 <li><a href="checkout.html"><i class="fa-regular fa-cart-shopping"></i></a></li>
-            
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="layout-wrapper">
+            <!-- Galleri seksjon -->
+            <section class="gallery-section">
+                <img class="product-item-1" src="Assets/img/dressmann-bilde-2.jpg" alt="Lite bilde 1">
+                <img class="product-item-2" src="Assets/img/dressmann-bilde-3.jpg" alt="Lite bilde 2">
+                <img class="product-item-3" src="Assets/img/dressmann-bilde-4.jpg" alt="Lite bilde 3">
+                <img class="right-column" src="Assets/img/dressmann-bilde-1.jpg" alt="Stort bilde">
+            </section>
+
+            <!-- Produktdetaljer -->
+            <section class="product-property">
+                <h2>Produktnavn</h2>
+                <a href="https://dressmann.com/no">MERKEBAVN</a>
+                <p>5195 kr inkl. mva.</p>
+                <p>Farge: <strong>Beige</strong></p>
+                <label for="size"></label>
+                <!-- https://www.sitepoint.com/style-html-details-element/ -->
+                <select id="size">
+                    <option value="">Velg størrelse</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                </select>
+                <button type="button">Legg i handlevogn</button>
+
+                <!-- Detaljer -->
+                <details>
+                    <summary>Materiale og vedlikehold</summary>
+                    <p>Informasjon om materiale og vedlikehold.</p>
+                </details>
+                <details>
+                    <summary>Produktdetaljer</summary>
+                    <p>Informasjon om produktdetaljene.</p>
+                </details>
+                <details>
+                    <summary>Størrelsestabell</summary>
+                    <p>Informasjon om størrelsestabellen.</p>
+                </details>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer (kan aktiveres ved å fjerne kommentaren) -->
+    
     <footer id="kontakt-oss">
-            
         <h2>LOGO</h2>
         <p>At vero eos at accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
 
@@ -46,11 +88,10 @@
             <section class="footer-section">
                 <h3>KONTAKT</h3>
                 <p><i class="fa-solid fa-location-dot"></i> <strong>Adresse:</strong> B R A veien 6C, 1783 Halden</p>
-                <p><i class="fa-solid fa-phone"></i><strong>Telefon:</strong>  69 60 80 00</p>
-                <p><i class="fa-solid fa-envelope"></i> <strong>E-post:</strong>  halden@hiof.no</p>
-                <p><i class="fa-solid fa-clock"></i><strong>Åpningstider:</strong>  Strnger 15:00</p>
+                <p><i class="fa-solid fa-phone"></i><strong>Telefon:</strong> 69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope"></i> <strong>E-post:</strong> halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock"></i><strong>Åpningstider:</strong> Strenger 15:00</p>
             </section>
-
             <section class="footer-section">
                 <h3>SNARVEIER</h3>
                 <ul>
@@ -59,7 +100,6 @@
                     <li><a href="#kontakt-oss">Kontakt oss</a></li>
                 </ul>
             </section>
-
             <section class="footer-section">
                 <h3>SOCIAL MEDIA</h3>
                 <ul class="social-media-ikoner">
@@ -68,10 +108,9 @@
                     <li><a href="https://www.instagram.com/"><i class="fab fa-instagram-square"></i></a></li>
                     <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
-
-
+            </section>
         </section>
-        
     </footer>
+    
 </body>
 </html>
