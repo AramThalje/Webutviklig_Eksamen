@@ -419,6 +419,20 @@ img {
 
 /* produkt.html */
 
+.breadcrumb{
+  display: flex;
+  
+  li{
+    list-style: none;
+  }
+ 
+  a:hover{
+    text-decoration: underline;
+  }
+}
+
+
+
 h1{
   text-align: center;
 }
@@ -465,6 +479,7 @@ h1{
 }
 .legge-til-kurven{
   width: 100%;
+  margin: 10px 0 !important;
 }
 
 
