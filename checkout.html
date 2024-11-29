@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free nettbutikk med modern design">
     <link rel="stylesheet" href="Assets/css/Ikoner/css/fontawesome.css">
     <link rel="stylesheet" href="Assets/css/Ikoner/css/brands.css">
     <link rel="stylesheet" href="Assets/css/Ikoner/css/solid.css">
 	<link rel="stylesheet" href="Assets/css/style.css">
     <title>checkout</title>
+    <style>
+    
+    </style>
 </head>
 <body>
+    
     <header>
         <!-- Navigation -->
         <nav class="navigasjon">
 
-            <form action="#" method="get" id="nav-search-bar">
+            <form action="#" class ="nav-search-bar">
                 <input type="search" name="search" placeholder="Søk etter produkter...">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </form>
@@ -37,7 +42,219 @@
             </ul>
         </nav>
     </header>
-    <footer id="kontakt-oss">
+
+    <!-- Checkout -->
+     <main>
+        <h1>Kassen</h1>
+
+        <section class="customer-info">
+        
+        <section class="shopping-cart">
+            <h3>1. SHOPPINGEN DIN</h3>
+            <article class="shopping-cart-product">
+                <figure class="shopping-cart-img">
+                    <img src="Assets/img/dressmann-bilde-1.jpg" alt="Herredress fra Dressmann i mørkeblått med slip">
+                </figure>
+                <section class="shopping-cart-details">
+                    <h3>PRODUKT NAVN</h3>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <p>Størrelse</p>
+                    <select class="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <label for="mengde-av-første-produkt">Antall
+                    <input type="number" id="mengde-av-første-produkt" value="1" min="1" name="mengde-av-første-produkt">
+                    </label>
+                </section>
+                
+                <section class="shopping-cart-actions">
+                    <button class="favoritt">&#9825;</button>
+                    <button class="slett">&#128465;</button>
+                    <!-- https://www.compart.com/en/unicode -->
+                </section>
+            </article>
+            <article class="shopping-cart-product">
+                <figure class="shopping-cart-img">
+                    <img src="Assets/img/dressmann-bilde-1.jpg" alt="Modell iført herredress, stående foran en nøytral bakgrunn">
+                </figure>
+                <section class="shopping-cart-details">
+                    <h3>PRODUKT NAVN</h3>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <p>Størrelse</p>
+                    <select class="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <label for="mengde-1">Antall</label>
+                    <input type="number" class="mengde-1" id="mengde-1" value="1" min="1">
+                </section>
+                <!-- https://www.compart.com/en/unicode -->
+                <section class="shopping-cart-actions">
+                    <button class="favoritt">&#9825;</button>
+                    <button class="slett">&#128465;</button>
+                </section>
+            </article>
+            <article class="shopping-cart-product">
+                <figure class="shopping-cart-img">
+                    <img src="Assets/img/dressmann-bilde-1.jpg" alt="Modell iført herredress, stående foran en nøytral bakgrunn">
+                </figure>
+                <section class="shopping-cart-details">
+                    <h3>PRODUKT NAVN</h3>
+                    <p>Kr 1999</p>
+                    <p>Farge: beige</p>
+                    <p>Størrelse</p>
+                    <select class="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <label for="mengde-1">Antall</label>
+                    <input type="number" class="mengde-1" value="1" min="1">
+                </section>
+                <!-- https://www.compart.com/en/unicode -->
+                <section class="shopping-cart-actions">
+                    <button class="favoritt">&#9825;</button>
+                    <button class="slett">&#128465;</button>
+                </section>
+            </article>
+        </section>
+        <!-- https://www.youtube.com/watch?v=moIHTT2XK9g (Opplysningsside tatt fra) -->
+        <!-- https://www.codingnepalweb.com/free-login-registration-form-html-css/ -->
+        
+            <h3>2. DINE OPPLYSNINGER</h3>
+            
+            
+            <section class="name-section">
+                <section>
+                    <label for="first-name">Fornavn</label>
+                    <input type="text" id="first-name" placeholder="Nora*" required>
+                </section>
+                <section>
+                    <label for="last-name">Etternavn</label>
+                    <input type="text" id="last-name" placeholder="Nordmann*" required>
+                </section>
+            </section>
+    
+            <section class="address-section">
+                <label for="street-address">Gateadresse
+                <input type="text" id="street-address" placeholder="BRA veien 6*" required>
+                </label>
+            </section>
+    
+            <section class="post-section">
+                <section>
+                    <label for="zipcode">Postnummer</label>
+                    <input type="text" id="zipcode" placeholder="1783*" required>
+                </section>
+                <section>
+                    <label for="city">Poststed</label>
+                    <input type="text" id="city" placeholder="Halden*" required>
+                </section>
+            </section>
+    
+            <section class="contact-info">
+                <label for="email">E-post</label>
+                <input type="email" id="email" placeholder="Noranordman@hiof.no.*" required>
+    
+                <label for="phone">Telefon</label>
+                <input type="tel" id="phone" placeholder="+4749***018" required>
+            </section>
+            <section class="buttons">
+                <button type="submit">Lagre</button>
+                <a href="#">Avbryt</a>
+            </section>
+            
+
+        <!-- Innlevering seksjon 'Checkout' -->
+        <section class="levering-info-section">
+                <h3>3. LEVERING</h3>
+                <p>LEVERINGSVALG</p>
+    
+                <section class="levering-info">
+                    <label class="levering-alternativer">
+                        <input type="radio" name="levering" value="express-hjem" required>
+                        Express Hjemlevering
+                        <!-- https://getemoji.com/ Emogi hentet fra -->
+                        <span class="pris-span">59 kr 🚚</span>
+                    </label>
+                    <span class="delivery-description">3-4 Virkedager<br>Bestill hverdag før 08:00* for levering neste arbeidsdag. Leveres hjem til deg før frokost mandag til lørdag. *For levering til postnummer 4000-7999 er leveringstiden 2 arbeidsdager, for postnummer 8000-9999 er leveringstiden 3 arbeidsdager.</span>
+                </section>
+    
+                <section class="levering-info">
+                    <label>
+                        <input type="radio" name="levering" value="express-utleveringssted">
+                        Ekspress Pakke til utleveringssted
+                        <!-- https://getemoji.com/ Emogi hentet fra -->
+                        <span class="pris-span">59 kr <span style="font-size: 1.5em;">📦</span></span>
+                    </label>
+                    <span class="delivery-description">1-3 Virkedager</span>
+                </section>
+    
+                <section class="levering-info">
+                    <label>
+                        <input type="radio" name="levering" value="standard-hjem">
+                        Standard Hjemlevering
+                        <!-- https://getemoji.com/ Emogi hentet fra -->
+                        <span class="pris-span">Gratis <span style="font-size: 1.5em;">🆓</span></span>
+                    </label>
+                    <span class="delivery-description">5-8 Virkedager<br>Leveres hjem til deg før frokost mandag til lørdag innen 4-7 hverdager.</span>
+                </section>
+        </section>
+
+        <!-- Betaling seksjon 'Checkout' -->
+        <section class="betaling-info-section">
+            <h3>4. BETALING</h3>
+            <!-- https://getemoji.com/ Emogi hentet fra -->
+            <p>BETAL MED KORT <span style="font-size: 1.5em;">💳</span></p>
+        
+            <section class="betaling-info">
+                <label class="input-label-card-number">
+                    Kortnummer<br>
+                    <input type="number" name="card-number" class="card-number">
+                </label>
+                <section class="utlopsdato-og-sikkerhet">
+                <label class="input-label-utlopsdato">
+                    Utløpsdato
+                    <input type="text" name="utlopsdato" placeholder=" mm / åå ">
+                </label>
+                <label class="input-label-sikkerhet-kode">
+                    cvc / cvv
+                    <input type="text" name="sikkerhet-kode" placeholder= "cvc / cvv">
+                    
+                </label>
+                </section>
+                <p class="total-pris">Å betale inkl. mva.<br><strong>1 199 kr</strong></p>
+                <button type="submit">Fullfør kjøp</button>
+            </section>
+            <p class="vilkaarende">Du bekrefter herved at opplysningene og dikumentene du har oppgitt er korrekt og fullstandige.
+                Leverandøren forholder seg retten til å heve eller avslutte avtaleforholdet dersom det foreligger uriktige eller ufullstandige opplysninger
+            </p>
+            <section class="checkbox-label-section">
+            <label class="checkbox-label">
+                <input type="checkbox" name="newsletter">
+                Ja takk! Send nyhetsbrev til meg.
+                
+            </label>
+            <label class="checkbox-label">
+                <input type="checkbox" name="sms-offers">
+                Jeg ønsker å motta tekstmeldinger med tilbud og nyheter.
+            </label>
+            </section>
+        </section>
+
+   
+
+        </section>
+     </main>
+
+
+
+     <footer class="kontakt-oss">
             
         <h2>LOGO</h2>
         <p>At vero eos at accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
@@ -69,10 +286,12 @@
                     <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
+              
 
 
         </div>
         
     </footer>
+    
 </body>
 </html>

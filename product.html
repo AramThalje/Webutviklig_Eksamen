@@ -16,7 +16,7 @@
     <header>
         <!-- Navigation -->
         <nav class="navigasjon">
-            <form action="#" method="get" id="nav-search-bar">
+            <form action="#" class ="nav-search-bar">
                 <input type="search" name="search" placeholder="Søk etter produkter...">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </form>
@@ -44,54 +44,264 @@
                 <img class="right-column" src="Assets/img/dressmann-bilde-1.jpg" alt="Stort bilde">
             </section>
 
-            <!-- Produktdetaljer -->
+            <!-- Produktdetaljer seksjon -->
             <section class="product-property">
                 <h2>Produktnavn</h2>
-                <a href="https://dressmann.com/no">MERKEBAVN</a>
+                <a href="https://dressmann.com/no">MERKENAVN</a>
                 <p>5195 kr inkl. mva.</p>
                 <p>Farge: <strong>Beige</strong></p>
-                <label for="size"></label>
+                
                 <!-- https://www.sitepoint.com/style-html-details-element/ -->
-                <select id="size">
+                <select class="product-size">
                     <option value="">Velg størrelse</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                     <option value="XL">XL</option>
                 </select>
-                <button type="button">Legg i handlevogn</button>
+                <section class="legge-til-kurven">
+                    <button type="button">Legg i handlevogn</button>
+                    <a href="product.html"><i class="fa-regular fa-heart"></i></a>
+                </section>
+                
 
                 <!-- Detaljer -->
                 <details>
                     <summary>Materiale og vedlikehold</summary>
-                    <p>Informasjon om materiale og vedlikehold.</p>
+                    <ul>
+                        <li>Overmateriale: 95% viskose, 5% elastan</li>
+                        <li>Materiale ermer: 100% polyester</li>
+                        <li>Materiale: Jersey</li>
+                    </ul>     
                 </details>
                 <details>
                     <summary>Produktdetaljer</summary>
-                    <p>Informasjon om produktdetaljene.</p>
+                    <p>Epcot is a theme park at Walt Disney world Resort Featuring exiting attractions,
+                        international pavillions, award-winning fireworks and seasonal special events.
+                    </p>
                 </details>
                 <details>
                     <summary>Størrelsestabell</summary>
-                    <p>Informasjon om størrelsestabellen.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>EU</th>
+                                <th>INT</th>
+                                <th>BRYSTVIDDE</th>
+                                <th>LIVVIDDE</th>
+                                <th>HOFTEMÅL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>32</td>
+                                <td>XXS</td>
+                                <td>76</td>
+                                <td>63</td>
+                                <td>85</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>XS</td>
+                                <td>80</td>
+                                <td>66</td>
+                                <td>89</td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td>S</td>
+                                <td>84</td>
+                                <td>69</td>
+                                <td>93</td>
+                            </tr>
+                            <tr>
+                                <td>38</td>
+                                <td>M</td>
+                                <td>88</td>
+                                <td>72</td>
+                                <td>97</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>L</td>
+                                <td>92</td>
+                                <td>76</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>42</td>
+                                <td>XL</td>
+                                <td>96</td>
+                                <td>80</td>
+                                <td>103</td>
+                            </tr>
+                            <tr>
+                                <td>44</td>
+                                <td>XXL</td>
+                                <td>100</td>
+                                <td>85</td>
+                                <td>106</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>3XL</td>
+                                <td>104</td>
+                                <td>90</td>
+                                <td>109</td>
+                            </tr>
+                            <tr>
+                                <td>48</td>
+                                <td>4XL</td>
+                                <td>110</td>
+                                <td>96.5</td>
+                                <td>114</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>5XL</td>
+                                <td>116</td>
+                                <td>103</td>
+                                <td>119</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>6XL</td>
+                                <td>122</td>
+                                <td>109.5</td>
+                                <td>124</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>7XL</td>
+                                <td>128</td>
+                                <td>116</td>
+                                <td>130</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>8XL</td>
+                                <td>134</td>
+                                <td>122.5</td>
+                                <td>136</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>9XL</td>
+                                <td>140</td>
+                                <td>129</td>
+                                <td>142</td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td>10XL</td>
+                                <td>146</td>
+                                <td>135.5</td>
+                                <td>148</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </details>
             </section>
-        </div>
-    </main>
 
-    <!-- Footer (kan aktiveres ved å fjerne kommentaren) -->
-    
+           
+        </div>
+        <!-- Ligende produkter seksjon -->
+        <aside class="ligende-products">
+            <h2>Ligende products</h2>
+            <section class="ligende-products-container">
+                <article class="ligende-products-card">
+                    <img src="Assets/img/produkt-1.jpg" alt="">
+                    <p>product name <span>Price: $99</span></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <p> 842 Reviews</p>
+                        </li>
+                    </ul>
+                    
+                </article>  
+                <article class="ligende-products-card">
+                    <img src="Assets/img/produkt-1.jpg" alt="">
+                    <p>product name <span>Price: $99</span></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <p> 842 Reviews</p>
+                        </li>
+                    </ul>
+                    
+                </article>  
+                <article class="ligende-products-card">
+                    <img src="Assets/img/produkt-1.jpg" alt="">
+                    <p>product name <span>Price: $99</span></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <p> 842 Reviews</p>
+                        </li>
+                    </ul>
+                    
+                </article>  
+                <article class="ligende-products-card">
+                    <img src="Assets/img/produkt-1.jpg" alt="">
+                    <p>product name <span>Price: $99</span></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <p> 842 Reviews</p>
+                        </li>
+                    </ul>
+                    
+                </article>  
+                <article class="ligende-products-card">
+                    <img src="Assets/img/produkt-1.jpg" alt="">
+                    <p>product name <span>Price: $99</span></p>
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <p> 842 Reviews</p>
+                        </li>
+                    </ul>
+                    
+                </article>    
+            </section>
+        </aside> 
+
+    </main>
     <footer id="kontakt-oss">
+            
         <h2>LOGO</h2>
         <p>At vero eos at accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
 
-        <section class="footer-cards">
+        <div class="footer-cards">
             <section class="footer-section">
                 <h3>KONTAKT</h3>
                 <p><i class="fa-solid fa-location-dot"></i> <strong>Adresse:</strong> B R A veien 6C, 1783 Halden</p>
-                <p><i class="fa-solid fa-phone"></i><strong>Telefon:</strong> 69 60 80 00</p>
-                <p><i class="fa-solid fa-envelope"></i> <strong>E-post:</strong> halden@hiof.no</p>
-                <p><i class="fa-solid fa-clock"></i><strong>Åpningstider:</strong> Strenger 15:00</p>
+                <p><i class="fa-solid fa-phone"></i><strong>Telefon:</strong>  69 60 80 00</p>
+                <p><i class="fa-solid fa-envelope"></i> <strong>E-post:</strong>  halden@hiof.no</p>
+                <p><i class="fa-solid fa-clock"></i><strong>Åpningstider:</strong>  Strnger 15:00</p>
             </section>
+
             <section class="footer-section">
                 <h3>SNARVEIER</h3>
                 <ul>
@@ -100,6 +310,7 @@
                     <li><a href="#kontakt-oss">Kontakt oss</a></li>
                 </ul>
             </section>
+
             <section class="footer-section">
                 <h3>SOCIAL MEDIA</h3>
                 <ul class="social-media-ikoner">
@@ -109,7 +320,11 @@
                     <li><a href="https://no.pinterest.com/"><i class="fa-brands fa-pinterest"></i></a></li>
                 </ul>
             </section>
-        </section>
+              
+
+
+        </div>
+        
     </footer>
     
 </body>
